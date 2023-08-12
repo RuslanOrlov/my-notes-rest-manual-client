@@ -196,7 +196,8 @@ public class NotesController {
 	}
 	
 	@PostMapping
-	public String postNote(@Valid NoteClientDTO note, BindingResult errors) {
+	public String postNote(@Valid @ModelAttribute("note") NoteClientDTO note, 
+							BindingResult errors) {
 		if (errors.hasErrors()) 
 			return "note-create";
 		
@@ -227,7 +228,8 @@ public class NotesController {
 	//   метода patchNote() Rest клиента. 
 	/*
 	@PatchMapping
-	public String patchNote(@Valid NoteClientDTO note, BindingResult errors) {
+	public String patchNote(@Valid @ModelAttribute("note") NoteClientDTO note, 
+							BindingResult errors) {
 		if (errors.hasErrors()) 
 			return "note-edit";
 		
@@ -255,7 +257,8 @@ public class NotesController {
 	//   метода patchNote() Rest клиента. 
 	/**/
 	@PatchMapping
-	public String patchNote(@Valid NoteClientDTO note, BindingResult errors) {
+	public String patchNote(@Valid @ModelAttribute("note") NoteClientDTO note, 
+							BindingResult errors) {
 		if (errors.hasErrors()) 
 			return "note-edit";
 		
