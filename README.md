@@ -3,12 +3,14 @@ EN: A project in Java and Spring Boot for taking notes using a manually develope
 
 The project implements a user interface layer, an MVC controller for processing user interface requests, as well as a REST client that interacts with the server using RestTemplate.
 
-After launching the application in the IDE, access to it is opened by the link http://localhost:8082/
+The application runs in the IDE and is available via the link http://localhost:8082/
 
-Through the user interface, you can perform:
-1) operations of adding, viewing, changing, logical deletion (by the link "Status" in the list of notes) and physical deletion of a note;
-2) line-by-line viewing of records and filtering of data in the list of notes;
-3) uploading a list of notes in the form of a report to an external PDF file (data is uploaded to the report only about the notes available in accordance with the filtering and pagination criteria).
+1. Data about notes in the client application is presented in the form of DTO objects and lists of DTO objects.
+2. Through the user interface of the application, you can perform:
+- operations of adding, viewing, changing, logical deletion (by the "Status" link in the list of notes) and physical deletion of a note;
+- page-by-page view of the list of notes and filtering of data in the list of notes;
+- uploading a list of notes in the form of a PDF report (data is uploaded only on available notes in accordance with the criteria for filtering and pagination).
+3. The client validates the data entered/modified by the user in html forms. Validation is implemented using annotations in the DTO class, as well as at the level of the MVC controller and html forms.
 
 P.S.: This version of the application implements only the client and does not have physical access to the database.
 
@@ -18,11 +20,13 @@ RU: Проект на языке Java и Spring Boot по учету замет�
 
 Проект реализует слой пользовательского интерфейса, MVC контроллер для обработки запросов пользовательского интерфейса, а также REST клиент, взаимодействующий с сервером с помощью RestTemplate. 
 
-После запуска приложения в IDE доступ к нему открывается по ссылке http://localhost:8082/
+Приложение запускается в IDE и доступно по ссылке http://localhost:8082/
 
-Через пользовательский интерфейс можно выполнить:
-1) операции добавления, просмотра, изменения, логического удаления (по ссылке "Статус" в списке заметок) и физического удаления заметки;
-2) пострачный просмотр записей и фильтрацию данных в списке заметок;
-3) выгрузку списка заметок в виде отчета во веншний файл формата PDF (в отчет выгружаются данные только о  доступных в соответствии с критериями фильтрации и постраничного просмотра заметках).
+1. Данные о заметках в клиентском приложении представлены в виде DTO объектов и списков DTO объектов.
+2. Через пользовательский интерфейс приложения можно выполнить:
+- операции добавления, просмотра, изменения, логического удаления (по ссылке "Статус" в списке заметок) и физического удаления заметки;
+- пострачный просмотр списка заметок и фильтрацию данных в списке заметок;
+- выгрузку списка заметок в виде отчета в формате PDF (выгружаются данные только о доступных заметках в соответствии с критериями фильтрации и постраничного просмотра).
+3. Клиент выполняет валидацию данных, вводимых/изменяемых пользователем в html формах. Валидация реализуется с помощью аннотаций в классе DTO, а также на уровне MVC контроллера и html форм.
 
 P.S.: Данная версия приложения реализует только клиент и не имеет физического доступа к БД.
